@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0 auto;
+            padding: 0;
+            text-align: center;
+        }
+        .board {
+            display: grid;
+            grid-template-rows: repeat(3, 100px);
+            grid-template-columns: repeat(3, 100px);
+            gap: 5px;
+            margin: 20px auto;
+            width: 320px;
+        }
+        .cell {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            color: #000000;
+            background-color: #d3d3d3;
+        }
+        .cell:hover {
+            background-color: #a9a9a9;
+        }
+        .restart {
+            width: 200px;
+            height: 50px;
+            background-color: #0000ff;
+            color: white;
+        }
+        .restart:hover {
+            background-color: #0000ffdc;
+        }
+    </style>
+</head>
+<body>
+    <h1> Tic-Tac-Toe </h1>
+    <div class="status"> Player X's turn</div>
+    <div class="board" id="board"></div>
+    <button class="restart" value="Restart Game" onclick="restartGame()">Restart Game</button>
+    <script src="./tic-tac-toe.js" ></script>
+</body>
+</html>
